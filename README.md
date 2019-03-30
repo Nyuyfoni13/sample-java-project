@@ -36,7 +36,7 @@ for a Maven repository. It's packed up by the "bundle" target, which
 creates a `bundle.jar` containing your project's signed artifacts. To
 use the "bundle" target you need to have GnuPG set up in your path, a
 generated key pair, and a running `gpg-agent`, unless you like typing
-your passphrase a bunch of times in a row
+your passphrase a bunch of times in a row.
 ## Philosophy
 
 I hate coding absolute paths in my build script and I hate including
