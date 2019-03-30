@@ -8,4 +8,6 @@ node('maven'){
             echo " Running the script"
     sh "sh test.sh"
     }
+    stage('Final')
+    echo "The job is completed successfully"
 }
