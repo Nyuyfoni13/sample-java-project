@@ -37,7 +37,6 @@ creates a `bundle.jar` containing your project's signed artifacts. To
 use the "bundle" target you need to have GnuPG set up in your path, a
 generated key pair, and a running `gpg-agent`, unless you like typing
 your passphrase a bunch of times in a row.
-
 ## Philosophy
 
 I hate coding absolute paths in my build script and I hate including
@@ -49,4 +48,4 @@ provides the libraries. Anyone who has the proper development
 environment set up -- one that works across many projects -- should be
 able to clone the repository and do a build simply by running the
 build program with no special arguments. There should be no need to
-edit or install anything into the project space for the initial build.
+edit or install anything into the project space for the initial build
