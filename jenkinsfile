@@ -7,7 +7,19 @@ node('maven'){
      stage('runningscript'){
           echo " Running the script"
           sh "sh test.sh"
+     }
+     stage('Building'){
+     sh "$maven360home/bin/mvn clean package -DskipTests=true"
+     }
+      stage('Archive Artifacts'){
+      archiveartifacts '**/target/*.jar'
     }
+      stage('Deployment'){
+        sshagent(['Depolyusr-target']){
+            sh "ssh -o StrictHostChecking=no deployusr@172.31.81.206 /opt/tomcat/stop.sh"
+      
+      }
+      }
      stage('Final'){
         echo " This job is completed and successfully saved"
      }
